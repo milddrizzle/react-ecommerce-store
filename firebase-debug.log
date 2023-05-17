@@ -1,0 +1,98 @@
+[debug] [2023-05-17T05:37:42.831Z] ----------------------------------------------------------------------
+[debug] [2023-05-17T05:37:42.833Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\pc\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-05-17T05:37:42.834Z] CLI Version:   11.29.1
+[debug] [2023-05-17T05:37:42.834Z] Platform:      win32
+[debug] [2023-05-17T05:37:42.834Z] Node Version:  v16.15.1
+[debug] [2023-05-17T05:37:42.835Z] Time:          Tue May 16 2023 22:37:42 GMT-0700 (Pacific Daylight Time)
+[debug] [2023-05-17T05:37:42.835Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-05-17T05:37:42.903Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-05-17T05:37:42.903Z] > authorizing via signed-in user (ramoslila817@gmail.com)
+[debug] [2023-05-17T05:37:42.903Z] [iam] checking project mild-react-ecommerce for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-05-17T05:37:42.906Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/mild-react-ecommerce:testIamPermissions [none]
+[debug] [2023-05-17T05:37:42.906Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/mild-react-ecommerce:testIamPermissions x-goog-quota-user=projects/mild-react-ecommerce
+[debug] [2023-05-17T05:37:42.906Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/mild-react-ecommerce:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-05-17T05:37:44.994Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/mild-react-ecommerce:testIamPermissions 200
+[debug] [2023-05-17T05:37:44.994Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/mild-react-ecommerce:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-05-17T05:37:44.996Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/mild-react-ecommerce [none]
+[debug] [2023-05-17T05:37:46.312Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/mild-react-ecommerce 200
+[debug] [2023-05-17T05:37:46.313Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/mild-react-ecommerce {"projectId":"mild-react-ecommerce","projectNumber":"473411487870","displayName":"mild-react-ecommerce","name":"projects/mild-react-ecommerce","resources":{"hostingSite":"mild-react-ecommerce"},"state":"ACTIVE","etag":"1_cd8eff7a-7b33-4100-9fd7-87976480fb7a"}
+[info] 
+[info] === Deploying to 'mild-react-ecommerce'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2023-05-17T05:37:46.318Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/mild-react-ecommerce/versions [none]
+[debug] [2023-05-17T05:37:46.318Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/mild-react-ecommerce/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2023-05-17T05:37:48.641Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/mild-react-ecommerce/versions 200
+[debug] [2023-05-17T05:37:48.641Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/mild-react-ecommerce/versions {"name":"projects/473411487870/sites/mild-react-ecommerce/versions/806c854b43f607e0","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[mild-react-ecommerce]: beginning deploy... 
+[info] i  hosting[mild-react-ecommerce]: found 17 files in build 
+[debug] [2023-05-17T05:37:48.654Z] [hosting] uploading with 200 concurrency
+[debug] [2023-05-17T05:37:48.658Z] [hosting] hash cache [YnVpbGQ] stored for 17 files
+[debug] [2023-05-17T05:37:48.659Z] [hosting][hash queue][FINAL] {"max":2,"min":1,"avg":1,"active":0,"complete":17,"success":17,"errored":0,"retried":0,"total":17,"elapsed":3}
+[debug] [2023-05-17T05:37:48.659Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/473411487870/sites/mild-react-ecommerce/versions/806c854b43f607e0:populateFiles [none]
+[debug] [2023-05-17T05:37:48.659Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/473411487870/sites/mild-react-ecommerce/versions/806c854b43f607e0:populateFiles {"files":{"/404.html":"3240c6b45513fdd97861a63c8ae3ef0e7d2bf1357ec632ad7e6839473710326c","/asset-manifest.json":"76806f5fd717484c929d5c41391e9b8021dce2c76ebc6a00d31ee0827b90a7d6","/favicon.ico":"a7d4669374863187f83dd52b850594e364b92ee3801c736484e73a61ca56b8bb","/index.html":"e135e6e2e6bc9b53ca0caf3c9ed6f6a3f5555b6c1a973598428d25d6ccc4e0f1","/robots.txt":"b2090cf9761ef60aa06e4fab97679bd43dfa5e5df073701ead5879d7c68f1ec5","/assets/main.png.jpg":"e6e776469909dc0ec802758225b934470fc12626c5c51308b809021a6ba1f062","/assets/main.png1.jpg":"3129858536ebabb97a665de49aef359386210d80b0455f128703ea19df71e8e4","/static/css/main.bf4fe210.css":"8efafb6fa23ba5bf51f07a75eb705005fef7a4c6ae1d974933ab6f4759ba045f","/static/css/main.bf4fe210.css.map":"85899a7e6c016c2cd1e6ae0c16172d47814b5dd7b7752a6d3d05ea24b8fe8dfd","/static/js/main.973c91a1.js":"611c4c5f978fd7cc95193387788442abd2ace620c14a3a87bbc928d21559a624","/static/js/main.973c91a1.js.LICENSE.txt":"670873db650478f1e716f347dccdf6a3fba5ff766ed8350efdac18e24c60c67c","/static/js/main.973c91a1.js.map":"d77efd3f25f1197c9aaf332b2d7afd0290a78eb7653835110f27c6eb17968bc6","/static/media/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf":"d9cef07d4f3569883fb4c3db76acea5478cef80775d012841eb78a42e60a8e89","/static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2":"38d88317bebc79b4945a679daadd47daebbadc5cd13b41473143394ca7e8d892","/static/media/fontawesome-webfont.8b43027f47b20503057d.eot":"4944999b255adf473d5b86b300eba33737e8f598c17f24e82a28582393331209","/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg":"9b74ca5333a9ca156ae6ef0920d5bc42d283e95d25651bf4375404f0407a63ab","/static/media/fontawesome-webfont.f691f37e57f04c152e23.woff":"b51c2c79cce89b7c5947672c13f735c24ee1a9f8f6ebdb957c5fdfe567f27d37"}}
+[debug] [2023-05-17T05:37:50.644Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/473411487870/sites/mild-react-ecommerce/versions/806c854b43f607e0:populateFiles 200
+[debug] [2023-05-17T05:37:50.644Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/473411487870/sites/mild-react-ecommerce/versions/806c854b43f607e0:populateFiles {"uploadRequiredHashes":["e6e776469909dc0ec802758225b934470fc12626c5c51308b809021a6ba1f062"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/mild-react-ecommerce/versions/806c854b43f607e0/files"}
+[debug] [2023-05-17T05:37:50.646Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/mild-react-ecommerce/versions/806c854b43f607e0/files/e6e776469909dc0ec802758225b934470fc12626c5c51308b809021a6ba1f062 [none]
+[debug] [2023-05-17T05:37:50.646Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/mild-react-ecommerce/versions/806c854b43f607e0/files/e6e776469909dc0ec802758225b934470fc12626c5c51308b809021a6ba1f062 [stream]
+[debug] [2023-05-17T05:37:50.647Z] [hosting][populate queue][FINAL] {"max":1988,"min":1988,"avg":1988,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1989}
+[debug] [2023-05-17T05:37:50.647Z] [hosting] uploads queued: 1
+[debug] [2023-05-17T05:38:39.026Z] [uploadQueue] Retrying task e6e776469909dc0ec802758225b934470fc12626c5c51308b809021a6ba1f062
+[debug] [2023-05-17T05:38:39.029Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/mild-react-ecommerce/versions/806c854b43f607e0/files/e6e776469909dc0ec802758225b934470fc12626c5c51308b809021a6ba1f062 [none]
+[debug] [2023-05-17T05:38:39.029Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/mild-react-ecommerce/versions/806c854b43f607e0/files/e6e776469909dc0ec802758225b934470fc12626c5c51308b809021a6ba1f062 [stream]
+[debug] [2023-05-17T05:39:27.798Z] [uploadQueue] Retrying task e6e776469909dc0ec802758225b934470fc12626c5c51308b809021a6ba1f062
+[debug] [2023-05-17T05:39:27.799Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/mild-react-ecommerce/versions/806c854b43f607e0/files/e6e776469909dc0ec802758225b934470fc12626c5c51308b809021a6ba1f062 [none]
+[debug] [2023-05-17T05:39:27.800Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/mild-react-ecommerce/versions/806c854b43f607e0/files/e6e776469909dc0ec802758225b934470fc12626c5c51308b809021a6ba1f062 [stream]
+[debug] [2023-05-17T05:41:01.511Z] ----------------------------------------------------------------------
+[debug] [2023-05-17T05:41:01.513Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\pc\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-05-17T05:41:01.513Z] CLI Version:   11.29.1
+[debug] [2023-05-17T05:41:01.513Z] Platform:      win32
+[debug] [2023-05-17T05:41:01.513Z] Node Version:  v16.15.1
+[debug] [2023-05-17T05:41:01.514Z] Time:          Tue May 16 2023 22:41:01 GMT-0700 (Pacific Daylight Time)
+[debug] [2023-05-17T05:41:01.514Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-05-17T05:41:01.581Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-05-17T05:41:01.582Z] > authorizing via signed-in user (ramoslila817@gmail.com)
+[debug] [2023-05-17T05:41:01.582Z] [iam] checking project mild-react-ecommerce for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-05-17T05:41:01.584Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/mild-react-ecommerce:testIamPermissions [none]
+[debug] [2023-05-17T05:41:01.584Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/mild-react-ecommerce:testIamPermissions x-goog-quota-user=projects/mild-react-ecommerce
+[debug] [2023-05-17T05:41:01.584Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/mild-react-ecommerce:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-05-17T05:41:03.414Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/mild-react-ecommerce:testIamPermissions 200
+[debug] [2023-05-17T05:41:03.414Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/mild-react-ecommerce:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-05-17T05:41:03.415Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/mild-react-ecommerce [none]
+[debug] [2023-05-17T05:41:04.738Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/mild-react-ecommerce 200
+[debug] [2023-05-17T05:41:04.738Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/mild-react-ecommerce {"projectId":"mild-react-ecommerce","projectNumber":"473411487870","displayName":"mild-react-ecommerce","name":"projects/mild-react-ecommerce","resources":{"hostingSite":"mild-react-ecommerce"},"state":"ACTIVE","etag":"1_cd8eff7a-7b33-4100-9fd7-87976480fb7a"}
+[info] 
+[info] === Deploying to 'mild-react-ecommerce'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2023-05-17T05:41:04.745Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/mild-react-ecommerce/versions [none]
+[debug] [2023-05-17T05:41:04.745Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/mild-react-ecommerce/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2023-05-17T05:41:06.969Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/mild-react-ecommerce/versions 200
+[debug] [2023-05-17T05:41:06.970Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/mild-react-ecommerce/versions {"name":"projects/473411487870/sites/mild-react-ecommerce/versions/23c6ffca74afc401","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[mild-react-ecommerce]: beginning deploy... 
+[info] i  hosting[mild-react-ecommerce]: found 17 files in build 
+[debug] [2023-05-17T05:41:06.983Z] [hosting] uploading with 200 concurrency
+[debug] [2023-05-17T05:41:07.129Z] [hosting] hash cache [YnVpbGQ] stored for 17 files
+[debug] [2023-05-17T05:41:07.129Z] [hosting][hash queue][FINAL] {"max":141,"min":3,"avg":25.705882352941178,"active":0,"complete":17,"success":17,"errored":0,"retried":0,"total":17,"elapsed":144}
+[debug] [2023-05-17T05:41:07.130Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/473411487870/sites/mild-react-ecommerce/versions/23c6ffca74afc401:populateFiles [none]
+[debug] [2023-05-17T05:41:07.130Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/473411487870/sites/mild-react-ecommerce/versions/23c6ffca74afc401:populateFiles {"files":{"/404.html":"3240c6b45513fdd97861a63c8ae3ef0e7d2bf1357ec632ad7e6839473710326c","/favicon.ico":"a7d4669374863187f83dd52b850594e364b92ee3801c736484e73a61ca56b8bb","/robots.txt":"b2090cf9761ef60aa06e4fab97679bd43dfa5e5df073701ead5879d7c68f1ec5","/assets/main.png.jpg":"e6e776469909dc0ec802758225b934470fc12626c5c51308b809021a6ba1f062","/assets/main.png1.jpg":"3129858536ebabb97a665de49aef359386210d80b0455f128703ea19df71e8e4","/asset-manifest.json":"76806f5fd717484c929d5c41391e9b8021dce2c76ebc6a00d31ee0827b90a7d6","/index.html":"e135e6e2e6bc9b53ca0caf3c9ed6f6a3f5555b6c1a973598428d25d6ccc4e0f1","/static/js/main.973c91a1.js.LICENSE.txt":"670873db650478f1e716f347dccdf6a3fba5ff766ed8350efdac18e24c60c67c","/static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2":"38d88317bebc79b4945a679daadd47daebbadc5cd13b41473143394ca7e8d892","/static/css/main.bf4fe210.css":"8efafb6fa23ba5bf51f07a75eb705005fef7a4c6ae1d974933ab6f4759ba045f","/static/media/fontawesome-webfont.f691f37e57f04c152e23.woff":"b51c2c79cce89b7c5947672c13f735c24ee1a9f8f6ebdb957c5fdfe567f27d37","/static/media/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf":"d9cef07d4f3569883fb4c3db76acea5478cef80775d012841eb78a42e60a8e89","/static/media/fontawesome-webfont.8b43027f47b20503057d.eot":"4944999b255adf473d5b86b300eba33737e8f598c17f24e82a28582393331209","/static/js/main.973c91a1.js":"611c4c5f978fd7cc95193387788442abd2ace620c14a3a87bbc928d21559a624","/static/css/main.bf4fe210.css.map":"85899a7e6c016c2cd1e6ae0c16172d47814b5dd7b7752a6d3d05ea24b8fe8dfd","/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg":"9b74ca5333a9ca156ae6ef0920d5bc42d283e95d25651bf4375404f0407a63ab","/static/js/main.973c91a1.js.map":"d77efd3f25f1197c9aaf332b2d7afd0290a78eb7653835110f27c6eb17968bc6"}}
+[debug] [2023-05-17T05:41:09.112Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/473411487870/sites/mild-react-ecommerce/versions/23c6ffca74afc401:populateFiles 200
+[debug] [2023-05-17T05:41:09.112Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/473411487870/sites/mild-react-ecommerce/versions/23c6ffca74afc401:populateFiles {"uploadRequiredHashes":["e6e776469909dc0ec802758225b934470fc12626c5c51308b809021a6ba1f062"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/mild-react-ecommerce/versions/23c6ffca74afc401/files"}
+[debug] [2023-05-17T05:41:09.113Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/mild-react-ecommerce/versions/23c6ffca74afc401/files/e6e776469909dc0ec802758225b934470fc12626c5c51308b809021a6ba1f062 [none]
+[debug] [2023-05-17T05:41:09.113Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/mild-react-ecommerce/versions/23c6ffca74afc401/files/e6e776469909dc0ec802758225b934470fc12626c5c51308b809021a6ba1f062 [stream]
+[debug] [2023-05-17T05:41:09.114Z] [hosting][populate queue][FINAL] {"max":1984,"min":1984,"avg":1984,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1986}
+[debug] [2023-05-17T05:41:09.114Z] [hosting] uploads queued: 1
+[debug] [2023-05-17T05:41:57.486Z] [uploadQueue] Retrying task e6e776469909dc0ec802758225b934470fc12626c5c51308b809021a6ba1f062
+[debug] [2023-05-17T05:41:57.489Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/mild-react-ecommerce/versions/23c6ffca74afc401/files/e6e776469909dc0ec802758225b934470fc12626c5c51308b809021a6ba1f062 [none]
+[debug] [2023-05-17T05:41:57.489Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/mild-react-ecommerce/versions/23c6ffca74afc401/files/e6e776469909dc0ec802758225b934470fc12626c5c51308b809021a6ba1f062 [stream]
+[debug] [2023-05-17T05:42:46.258Z] [uploadQueue] Retrying task e6e776469909dc0ec802758225b934470fc12626c5c51308b809021a6ba1f062
+[debug] [2023-05-17T05:42:46.259Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/mild-react-ecommerce/versions/23c6ffca74afc401/files/e6e776469909dc0ec802758225b934470fc12626c5c51308b809021a6ba1f062 [none]
+[debug] [2023-05-17T05:42:46.259Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/mild-react-ecommerce/versions/23c6ffca74afc401/files/e6e776469909dc0ec802758225b934470fc12626c5c51308b809021a6ba1f062 [stream]
+[debug] [2023-05-17T05:43:35.836Z] [uploadQueue] Retrying task e6e776469909dc0ec802758225b934470fc12626c5c51308b809021a6ba1f062
+[debug] [2023-05-17T05:43:35.839Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/mild-react-ecommerce/versions/23c6ffca74afc401/files/e6e776469909dc0ec802758225b934470fc12626c5c51308b809021a6ba1f062 [none]
+[debug] [2023-05-17T05:43:35.840Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/mild-react-ecommerce/versions/23c6ffca74afc401/files/e6e776469909dc0ec802758225b934470fc12626c5c51308b809021a6ba1f062 [stream]
+[debug] [2023-05-17T05:48:36.050Z] [uploadQueue] Retrying task e6e776469909dc0ec802758225b934470fc12626c5c51308b809021a6ba1f062
+[debug] [2023-05-17T05:48:36.052Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/mild-react-ecommerce/versions/23c6ffca74afc401/files/e6e776469909dc0ec802758225b934470fc12626c5c51308b809021a6ba1f062 [none]
+[debug] [2023-05-17T05:48:36.052Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/mild-react-ecommerce/versions/23c6ffca74afc401/files/e6e776469909dc0ec802758225b934470fc12626c5c51308b809021a6ba1f062 [stream]
