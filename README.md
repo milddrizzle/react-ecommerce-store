@@ -12,13 +12,6 @@ https://mild-react-ecommerce.web.app/
 - Easy to integrate with Backend
 - Fully Responsive
 
-
-## Screenshots
-
-![App Screenshot](https://i.ibb.co/fQ293tm/image.png)
-
-
-
 ## Run Locally
 
 Clone the project
